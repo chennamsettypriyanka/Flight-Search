@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/825fb8f089.js" crossorigin="anonymous"></script>
+    <title>Flight Booking</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="flight-logo">
+            <img src="/images/logo/flight-logo-1.png" alt="flight-logo">
+        </div>
+        <ul class="nav-elements">
+            <li>
+                <a href="#"><i class="fa-solid fa-business-time"></i><span>My Bookings</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-circle-info"></i><span> About us</span></a>
+            </li>
+            <li>
+                <a href="#"> <i class="fa-solid fa-address-card"></i><span>Contact us</span> </a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-circle-user"></i><span>Priyanka</span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+
+    <main>
+        <div class="image-corousel">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="/images/corousel/seven.jpg" alt="Flight Image 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/images/corousel//three.jpg" alt="Flight Image 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/images/corousel/five.jpg" alt="Flight Image 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/images/corousel/six.jpg" alt="Flight Image 4">
+                </div>
+            </div>
+
+            <div class="booking-container">
+                <div class="user-flight-input">
+                    <form id="form">
+                        <div class="slider-container">
+                            <div class="slider-tab active" id="singleTripTab">Single Trip</div>
+                            <div class="slider-tab" id="roundTripTab">Round Trip</div>
+                        </div>
+                        <div class="from-city">
+                            <p>From</p>
+                            <input class="city" type="text" id="from-city-name" name="from-city-name"
+                                placeholder="Enter city" value="">
+                        </div>
+                        <div class="swap-icon">
+                            <button id="swap-button"><i class="fa-solid fa-right-left"></i></button>
+                        </div>
+                        <div class="to-city">
+                            <p>To</p>
+                            <input class="city" type="text" id="to-city-name" name="to-city-name"
+                                placeholder="Enter city" value="" required>
+                        </div>
+                        <div class="departure">
+                            <p>Departure</p>
+                            <input class="departure-date journey" type="date" id="departure-date" name="departure-date"
+                                value="">
+                        </div>
+                        <div class="return" id="return-date">
+                            <p>Return</p>
+                            <input class="return-date journey" type="date" id="arrival-date" name="return-date"
+                                placeholder="Enter city" value="" required>
+                        </div>
+                        <div class="type">
+                            <div class="travellers">
+                                <p>Travellers</p>
+                                <input type="text" class="traveller-input" name="traveller" placeholder="Enter count"
+                                    value="" required>
+                            </div>
+                            <div class="ticket-type">
+                                <p>Type</p>
+                                <select class="ticket-type-input" name="type" required>
+                                    <option value="null"></option>
+                                    <option value="Business">Business</option>
+                                    <option value="economy">economy</option>
+                                    <option value="first class">first class</option>
+                                </select>
+                            </div>
+                            <div class="search-results-button">
+                                <input type="submit" id="search-button" value="Search Results">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="our-offers">
+            <h3>Offers For You</h3>
+
+            <div class="offers">
+
+                <div class="offer">
+                    <div class="vistara-offer">
+                        <img src="/images/offer/vistara-offer.jpg" alt="vistara-offer">
+                        <div class="vistara-off">
+                            <div class="offer-on">Flights</div>
+                            <div class="offer-price"> Book Flights Starting @ Rs. 1,648*</div>
+                            <div>Valid Till 31<sup>st</sup> May</div>
+                        </div>
+                    </div>
+                    <div class="book">Book Now</div>
+                </div>
+                <div class="offer">
+                    <div class="spicejet-offer">
+                        <img src="/images/offer/spicejet-offer.jpg" alt="spicejet-offer">
+                        <div class="spicejet-off">
+                            <div class="offer-on"> Domestic Flights</div>
+                            <div class="offer-price"> Book Flights Starting @ Rs. 1,888*</div>
+                            <div>Valid Till 1<sup>st</sup>June</div>
+                        </div>
+                    </div>
+                    <div class="book">Book Now</div>
+                </div>
+                <div class="offer">
+                    <div class="airasia-offer">
+                        <img src="/images/offer/air-asia.jpg" alt="airasia-offer">
+                        <div class="airasia-off">
+                            <div class="offer-on">Flights</div>
+                            <div class="offer-price"> Book Flights Starting @ Rs. 1,748*</div>
+                            <div>Valid Till 31<sup>st</sup> May</div>
+                        </div>
+                    </div>
+                    <div class="book">Book Now</div>
+                </div>
+
+            </div>
+        </div>
+
+        <h3>Top Regional Destinations</h3>
+        <div class="places">
+            <figure>
+                <img src="/images/image/Delhi.jpg" alt="Delhi">
+                <figcaption>Delhi</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/image/Hyderabad.jpg" alt="Hyderabad">
+                <figcaption>Hyderabad</figcaption>
+            </figure>
+            <figure>
+                <img src="/images//image/Mumbai.jpg" alt="mumbai">
+                <figcaption>Mumbai</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/image/kolkata.jpg" alt="kolkata">
+                <figcaption>Kolkata</figcaption>
+            </figure>
+            <figure>
+                <img src="/images//image/Chennai.jpg" alt="chennai">
+                <figcaption>Chennai</figcaption>
+            </figure>
+        </div>
+
+
+        <h3>Popular Domestic Airlines</h3>
+        <div class="airlines">
+            <figure>
+                <img src="/images/image/IndiGo-Logo.png" alt="indigo">
+                <figcaption>Indigo</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/image/AirAsia_New_Logo.svg.png" alt="Air Asia">
+                <figcaption>Air Asia</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/image/spicejet.png" alt="spicejet">
+                <figcaption>Spicejet</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/image/vistara.jpg" alt="vistara">
+                <figcaption>Vistara</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/image/air inida.png" alt="Air India">
+                <figcaption>Air India</figcaption>
+            </figure>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-nav">
+            <div class="help">
+                <h5>Help</h5>
+                <nav>
+                    <a href="#">Payments</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Cancellaton</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Report</a>
+                    <a href="#">Infringment</a>
+                </nav>
+            </div>
+            <div class="policy">
+                <h5>Policy</h5>
+                <nav>
+                    <a href="#">Consumer Policy</a>
+                    <a href="#">Return Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Security</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Site Map</a>
+                </nav>
+            </div>
+            <div class="platform">
+                <h5>Platform</h5>
+                <nav>
+                    <a href="#">Travel Hacks</a>
+                    <a href="#">Company Info</a>
+                    <a href="#">Partnership</a>
+                </nav>
+            </div>
+            <div class="service">
+                <h5>1800 123 4567</h5>
+                <h6 class="service-hours">Service hours: 09:00-21:00</h6>
+                <div class="chat-suppport transform">
+                    <span>chat support</span>
+                </div>
+
+                <div class="payment">Payment Methods</div>
+                <nav>
+                    <div class="payment-list">
+                        <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+                        <a href="#"><i class="fa-brands fa-cc-mastercard"></i></a>
+                        <a href="#"><i class="fa-brands fa-cc-discover"></i></a>
+                        <a href="#"><i class="fa-brands fa-cc-amex"></i></a>
+                        <a href="#"><i class="fa-brands fa-cc-paypal"></i></a>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+        <div class="copy-right">
+            <div>Copyright © 2010 - 2023 Our Flights. All Rights Reserved</div>
+            <div class="social-media">
+                <h4>Follow Us.<i class="fa-brands fa-square-facebook"></i> <i class="fa-brands fa-twitter"></i><i
+                        class="fa-brands fa-youtube"></i><i class="fa-brands fa-instagram"></i></h4>
+                <h6>We want to hear from you</h6>
+            </div>
+    </footer>
+    <script type="text/javascript" src="../javascript/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/results.css">
+    <script src="https://kit.fontawesome.com/825fb8f089.js" crossorigin="anonymous"></script>
+    <title>Flight Booking</title>
+</head>
+
+<body>
+    <header>
+        <div class="flight-logo">
+            <img src="/images/logo/flight-logo-1.png" alt="Flight logo">
+        </div>
+        <ul class="nav-elements">
+            <li>
+                <a href="#"><i class="fa-solid fa-business-time"></i><span>My Bookings</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-circle-info"></i><span> About us</span></a>
+            </li>
+            <li>
+                <a href="#"> <i class="fa-solid fa-address-card"></i><span>Contact us</span> </a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-circle-user"></i><span> Priyanka</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </header>
+    <main>
+        <div class="booking-container">
+            <div class="user-flight-input">
+                <form id="form">
+                    <div class="slider-container">
+                        <div class="slider-tab active" id="singleTripTab">Single Trip</div>
+                        <div class="slider-tab" id="roundTripTab">Round Trip</div>
+                    </div>
+                    <div class="from-city">
+                        <div>From</div>
+                        <input class="city" type="text" id="from-city-name" name="from-city-name"
+                            placeholder="Enter city" value="" required>
+                    </div>
+                    <div class="swap-icon">
+                        <button id="swap-button"><i class="fa-solid fa-right-left"></i></button>
+                    </div>
+                    <div class="to-city">
+                        <div>To</div>
+                        <input class="city" type="text" id="to-city-name" name="to-city-name" placeholder="Enter city"
+                            value="" required>
+                    </div>
+                    <div class="departure">
+                        <div>Departure</div>
+                        <input class="departure-date journey" type="date" id="departure-date" name="departure-date"
+                            value="" required>
+                    </div>
+                    <div class="return" id="return">
+                        <div>Return</div>
+                        <input class="return-date journey" type="date" id="return-date" name="return-date"
+                            placeholder="Enter city" value="" required>
+                    </div>
+
+                    <div class="travellers">
+                        <div>Travellers</div>
+                        <input type="text" class="traveller-input" name="traveller" placeholder="Enter count" value=""
+                            required>
+                    </div>
+                    <div class="ticket-type">
+                        <div>Type</div>
+                        <select class="ticket-type-input" name="type" required>
+                            <option value="null"></option>
+                            <option value="Business">Business</option>
+                            <option value="economy">economy</option>
+                            <option value="first class">first class</option>
+                        </select>
+                    </div>
+                    <div class="search-results-button">
+                        <input type="submit" id="search-button" value="Search Again">
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" id="search-airlines" placeholder="search flights">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="price-sort">
+            <span>Sort By</span>
+            <button id="price-low">Price High to Low</button>
+            <button id="price-high"> Price Low to High</button>
+        </div>
+
+        <div class="results-container">
+            <div class="filter-container">
+                <div class="filter-header customize-box-shadow-bottom">
+                    <h3 class="filter">Filter By</h3>
+                    <h3 class="reset">Reset All</h3>
+                </div>
+                <div class="stops-filter customize-box-shadow-bottom">
+                    <div class="accordion">
+                        <h4> Stops</h4>
+                        <span class="icon" id="stop-down"><i class="fa-solid fa-sort-down"></i></span>
+                    </div>
+                    <div id="stops-body">
+                        <div class="customize-margin-top">
+                            <input class="stops" type="checkbox" name="stop" value="0">
+                            <label for="Non-stop">Non stop</label>
+                        </div>
+                        <div class="customize-margin-top">
+                            <input class="stops" type="checkbox" name="stop" value="1">
+                            <label for="one-stop">1 stop</label>
+                        </div>
+                        <div class="customize-margin-top">
+                            <input class="stops" type="checkbox" name="stop" value="2">
+                            <label for="one-stop">2 stops</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="departure-filter customize-margin customize-box-shadow-bottom">
+                    <div class="accordion">
+                        <h4 id="departure-city">Departure from</h4>
+                        <span class="icon" id="departure-down"><i class="fa-solid fa-sort-down"></i></span>
+                    </div>
+                    <div id="departure-body">
+                        <div class="customize-margin-top">
+                            <input type="checkbox" name="early-morning" value="12am-6am" class="departure-time">
+                            <label for="early-morning">Early Morning</label>
+                            <span class="time">12am - 6am</span>
+                        </div>
+                        <div class="customize-margin-top">
+                            <input type="checkbox" name="morning" value="6am-12pm" class="departure-time">
+                            <label for="morning">Morning</label>
+                            <span class="time">6am - noon</span>
+                        </div>
+                        <div class="customize-margin-top">
+                            <input type="checkbox" name="Afternoon" value="12pm-6pm" class="departure-time">
+                            <label for="Afternoon">Afternoon</label>
+                            <span class="time">noon - 6pm</span>
+                        </div>
+                        <div class="customize-margin-top">
+                            <input type="checkbox" name="night" value="6pm-12am" class="departure-time">
+                            <label for="night">Night</label>
+                            <span class="time">6pm - midnight</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-filter customize-margin customize-box-shadow-bottom">
+                    <div class="accordion">
+                        <h4 id="price-filter">Price</h4>
+                        <span class="icon" id="price-down"><i class="fa-solid fa-sort-down"></i></span>
+                    </div>
+                    <div id="price-body">
+                        <div id="slider"></div>
+                        <div class="price-range-container">
+                            <div class="price-range-value">
+
+                                Min<input id="Min" type="text" />
+                            </div>
+                            <div class="price-range-value">
+                                Max<input id="Max" type="text" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="provider-filter customize-margin customize-box-shadow-bottom">
+                    <div class="accordion">
+                        <h4 id="price-filter"> Airlines</h4>
+                        <span class="icon" id="airline-down"><i class="fa-solid fa-sort-down"></i></span>
+                    </div>
+                    <div id="airlines-body">
+                        <div class="customize-margin-top">
+                            <input class="airline" type="checkbox" name="indigo" value="Indigo">
+                            <img src="/images/flight-logos/indigo.jpg" alt="indigo" class="airline-logo airline-common">
+                            <label for="indigo" class="airline-common">Indigo</label>
+                        </div>
+                        <div class="customize-margin-top">
+                            <input class="airline" type="checkbox" name="airasia" value="Air Asia">
+                            <img src="/images/flight-logos/air-asia.jpg" alt="airasia"
+                                class="airline-logo airline-common">
+                            <label for="airasia" class="airline-common">Air asia</label>
+                        </div>
+                        <div class="customize-margin-top">
+                            <input class="airline" type="checkbox" name="airindia" value="Air India">
+                            <img src="/images/flight-logos/airindia.jpg" alt="airindia"
+                                class="airline-logo airline-common">
+                            <label for="airindia" class="airline-common">Air india</label>
+                        </div>
+                        <div class="customize-margin-top">
+                            <input class="airline" type="checkbox" name="spicejet" value="Spicejet">
+                            <img src="/images/flight-logos/spicejet.jpg" alt="spicejet"
+                                class="airline-logo airline-common">
+                            <label for="spicejet" class="airline-common">Spicejet</label>
+                        </div>
+                        <div class="customize-margin-top">
+                            <input class="airline" type="checkbox" name="vistara" value="Vistara">
+                            <img src="/images/flight-logos/vistara.jpg" alt="vistara"
+                                class="airline-logo airline-common">
+                            <label for="vistara" class="airline-common">Vistara</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filtered-flight-cards" id="filtered-flights">
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script type="module" src="/javascript/results.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+</body>
+
+</html>
